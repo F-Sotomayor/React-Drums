@@ -3,9 +3,9 @@ import "./pad.css";
 
 function Pad(props) {
   React.useEffect(() => {
-    let audio;
     window.addEventListener("keydown", (e) => {
       if (e.key === props.drumkey || e.key === props.drumkey.toLowerCase()) {
+        let audio;
         audio = new Audio("sounds/" + `${e.key}` + ".wav");
         audio.play();
       }
